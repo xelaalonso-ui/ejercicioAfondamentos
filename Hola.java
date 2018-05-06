@@ -4,6 +4,7 @@ public class Hola {
 		System.out.println("Welcome to de CsharpWorld"); 
         int a=0b11101; 
 		int b =234;
+	System.out.println(b);	
         System.out.println(a);
 	} 
 }
