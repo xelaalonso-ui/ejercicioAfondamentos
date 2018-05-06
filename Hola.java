@@ -1,4 +1,5 @@
 public class Hola { 
+	int boo;
 	public static void main (String args[]){ 
 		System.out.println("Welcome to de CsharpWorld"); 
         int a=0b11101; 
