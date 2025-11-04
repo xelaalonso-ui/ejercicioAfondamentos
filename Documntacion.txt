@@ -1,0 +1,71 @@
+ Pasos para Crear y Subir un Repositorio a GitHub desde CMD
+
+Este proceso implica crear el repositorio localmente con Git y luego conectarlo y subirlo a GitHub.
+
+1. Inicializar el Repositorio Local (Git)
+
+    Abre el Símbolo del Sistema (CMD).
+
+    Navega al directorio de tu proyecto (la carpeta donde están tus archivos) usando el comando cd:
+    Bash
+
+cd C:\ruta\a\tu\proyecto
+
+(Reemplaza la ruta con la de tu proyecto).
+
+Inicializa un nuevo repositorio de Git en ese directorio:
+Bash
+
+    git init
+
+    Esto crea una subcarpeta oculta llamada .git que contiene todos los archivos necesarios para el control de versiones.
+
+2. Preparar y Confirmar el Primer Cambio (Commit)
+
+    Agrega todos los archivos de tu proyecto al área de preparación de Git:
+    Bash
+
+git add .
+
+(El punto . agrega todos los archivos nuevos o modificados).
+
+Crea una confirmación (commit) con un mensaje descriptivo:
+Bash
+
+    git commit -m "Commit inicial del proyecto"
+
+    Esto guarda los archivos del área de preparación en el historial del repositorio local.
+
+3. Crear el Repositorio Remoto en GitHub
+
+    Ve a GitHub e inicia sesión.
+
+    Haz clic en el botón "New" (Nuevo) para crear un nuevo repositorio.
+
+    Escribe el nombre de tu repositorio (por ejemplo, mi-primer-proyecto).
+
+    Asegúrate de NO marcar la opción para inicializar el repositorio con un README, .gitignore o licencia, ya que ya lo has inicializado localmente.
+
+    Haz clic en "Create repository" (Crear repositorio).
+
+    En la página que aparece, copia la URL del repositorio remoto (generalmente la opción HTTPS). Será algo como https://github.com/TuUsuario/mi-primer-proyecto.git.
+
+4. Conectar y Subir a GitHub (Push)
+
+    Vuelve al CMD y conecta tu repositorio local con el remoto de GitHub, usando la URL que copiaste:
+    Bash
+
+git remote add origin https://github.com/TuUsuario/mi-primer-proyecto.git
+
+(origin es el alias predeterminado para el repositorio remoto).
+
+Sube (push) la rama local (generalmente main o master) a GitHub:
+Bash
+
+git push -u origin main
+
+    Si tu rama inicial es master en lugar de main, usa git push -u origin master.
+
+    La opción -u establece origin main (o origin master) como el upstream (seguimiento), para que las próximas veces solo necesites escribir git push.
+
+Si es la primera vez que subes, es posible que se te pida que te autentiques con tu usuario y contraseña de GitHub, o mediante un Token de Acceso Personal (PAT), o se abrirá una ventana del navegador para la autenticación.
